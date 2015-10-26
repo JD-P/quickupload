@@ -15,7 +15,7 @@ def upload_file():
     with open("uploads/" + filename) as outfile:
         outfile.write(file_contents)
         outfile.flush()
-    #send_OK()
+    send_OK()
 
 def sanitize_filename(filename):
     """Sanitize a filename, removing dangerous characters that could be used to 
@@ -44,3 +44,4 @@ def send_OK():
     # Text
     writer.write("Upload Sucessful!")
 
+upload_file()
