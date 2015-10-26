@@ -12,7 +12,7 @@ def upload_file():
     uploaded_file = form["upload"]
     filename = sanitize_filename(uploaded_file.filename)
     file_contents = uploaded_file.file.read()
-    with open("uploads/" + filename, "w") as outfile:
+    with open("uploads/" + filename, "wb") as outfile:
         outfile.write(file_contents)
         outfile.flush()
     send_OK()
