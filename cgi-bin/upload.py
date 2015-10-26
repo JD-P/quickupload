@@ -25,9 +25,9 @@ def sanitize_filename(filename):
     """
     filename = filename.replace("..", ".")
     for character in filename:
-        if character not in ("ABCDEFGHIJKLMNOPQRSTUVWXYZ",
-                             "abcdefghijklmnopqrstuvwxyz",
-                             "0123456789",
+        if character not in ("ABCDEFGHIJKLMNOPQRSTUVWXYZ" +
+                             "abcdefghijklmnopqrstuvwxyz" + 
+                             "0123456789" + 
                              "._-"):
             filename = filename.replace(character, "")
     return filename
