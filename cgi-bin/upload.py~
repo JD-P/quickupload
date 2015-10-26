@@ -1,0 +1,8 @@
+import cgi
+import os
+
+def upload_file():
+    """Upload a file received from user input to the server."""
+    form = cgi.FieldStorage()
+    uploaded_file = form["upload"]
+    with open("uploads/" + 
